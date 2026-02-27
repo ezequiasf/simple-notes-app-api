@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @Entity
-@Table(name="tb_notes")
+@Table(name = "tb_notes")
 public class Note {
 
     @Id
@@ -22,10 +22,9 @@ public class Note {
     @Column(columnDefinition = "TEXT")
     private String content;
 
-
     @Column(updatable = false)
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
-    private Instant lastModified;
+    private LocalDateTime lastModified;
 }
 
