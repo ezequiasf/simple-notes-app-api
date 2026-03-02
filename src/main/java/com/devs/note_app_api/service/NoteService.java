@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -46,5 +47,22 @@ public class NoteService {
             throw new NoteException("Erro ao tentar atualizar nota -" + noteUpdate.getId());
         }
         throw new NoteNotFoundException("Nota não encontrada para atualização");
+    }
+
+    public void deleteNote(Long id){
+        try {
+            noteRepository.deleteById(id);
+        } catch (Exception e) {
+            throw new NoteException("Erro ao tentar deletar nota de id -" + id);
+        }
+    }
+
+    public List<Note> listNote(){
+        try {
+            return  noteRepository.findAll();
+        }catch (Exception e){
+            throw new NoteException("Erro ao tentar listar notas ");
+        }
+
     }
 }
