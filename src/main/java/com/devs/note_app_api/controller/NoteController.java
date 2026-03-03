@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
@@ -28,8 +30,14 @@ public class NoteController {
     }
 
     @GetMapping("/listar")
-    public void listNote(){
-        noteService.listNote();
+    public List<Note> listNote() {
+        
+        return noteService.listNote();
+    }
+
+    @PutMapping("/atualizar")
+    public void updateNote(@RequestBody NoteUpdateDto noteUpdateDto){
+        noteService.updateNote(noteUpdateDto);
     }
 
 }
