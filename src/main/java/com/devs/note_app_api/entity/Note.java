@@ -1,4 +1,4 @@
-package com.devs.note_app_api;
+package com.devs.note_app_api.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;

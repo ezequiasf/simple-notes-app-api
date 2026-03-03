@@ -1,6 +1,6 @@
 package com.devs.note_app_api.service;
 
-import com.devs.note_app_api.Note;
+import com.devs.note_app_api.entity.Note;
 import com.devs.note_app_api.NoteRepository;
 import com.devs.note_app_api.dto.NoteCreateDto;
 import com.devs.note_app_api.dto.NoteUpdateDto;

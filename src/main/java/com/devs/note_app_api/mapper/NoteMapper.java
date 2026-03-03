@@ -1,6 +1,6 @@
 package com.devs.note_app_api.mapper;
 
-import com.devs.note_app_api.Note;
+import com.devs.note_app_api.entity.Note;
 import com.devs.note_app_api.dto.NoteCreateDto;
 import lombok.experimental.UtilityClass;
 
