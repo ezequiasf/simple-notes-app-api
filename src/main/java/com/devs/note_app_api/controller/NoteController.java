@@ -31,7 +31,6 @@ public class NoteController {
 
     @GetMapping("/listar")
     public List<Note> listNote() {
-        
         return noteService.listNote();
     }
 

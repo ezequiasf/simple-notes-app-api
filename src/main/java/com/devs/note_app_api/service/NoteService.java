@@ -49,7 +49,7 @@ public class NoteService {
         throw new NoteNotFoundException("Nota não encontrada para atualização");
     }
 
-    public void deleteNote(Long id){
+    public void deleteNote(Long id) {
         try {
             noteRepository.deleteById(id);
         } catch (Exception e) {
@@ -57,10 +57,10 @@ public class NoteService {
         }
     }
 
-    public List<Note> listNote(){
+    public List<Note> listNote() {
         try {
-            return  noteRepository.findAll();
-        }catch (Exception e){
+            return noteRepository.findAll();
+        } catch (Exception e) {
             throw new NoteException("Erro ao tentar listar notas ");
         }
 
